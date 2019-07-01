@@ -47,7 +47,7 @@ Mas info https://developers.google.com/gmail/api/quickstart/python
 
 
 
-## From Docker 
+## Test script from Docker 
 
 ### pre requisitos
 
@@ -97,7 +97,7 @@ Ver los logs
 
 
 
-## From Debian 
+## Test script from Debian
 Debian 9 netinstall
 
 #Base de datos
@@ -124,7 +124,7 @@ crear tablas hay 2 maneras restaurando el dump
   $ mysql -u mercadolibre -pmercadolibre mercadolibre_ldap < mysql/dump_mercadolibre_ldap.sql
 ```
 
-# Python Config
+### Python Config
 
 Verificar tener instalado cliente pip
 
@@ -140,7 +140,7 @@ $ pip install -r requirements.txt
 ```
 
 
-##  EJECUCION
+###  EJECUCION
 
 ```bash
   $ python challenge3.py
