@@ -79,7 +79,7 @@ def guardar_mysql(devops_email_asunto, devops_email_from, devops_email_date):
         mymysql.commit()
     except Exception, e:
         print e
-        print "CRITICAL NO PUDE INSERTAR EN LA BASE DE DATOS"
+        print "CRITICAL no pude insertar en la base de datos revisar salida"
         sys.exit(1)
 
 def main():
@@ -114,6 +114,7 @@ def main():
 		pass
         #print ("devops en asunto o body", "asunto: ", msg_subject, " fecha: ", fecha,  " from: ", msg_from, " body: " + body)
         if ( "devops" in msg_subject.lower() ) or ( "devops" in body.lower() ) :
+            # Si existe en el subject o body la palabra devops la guardo en la base de datos
             print ("devops en asunto o body", "asunto: ", msg_subject, " fecha: ", fecha,  " from: ", msg_from, " body: " + body)
             guardar_mysql(msg_subject, msg_from, fecha)
             marcar_email_leido(GMAIL,m_id)
